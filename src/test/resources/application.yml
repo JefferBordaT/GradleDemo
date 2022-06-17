@@ -1,0 +1,17 @@
+kafka:
+  enabled: false
+  consumer:
+    topic: dtp.ip-calculator.1.event.ip-calculated
+  producer:
+    topic: dtp.ip-calculator.1.query.calculate-ip
+
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9093
+
+cucumber:
+  options:
+    feature: classpath:feature
+    glue: com.example.gradledemo
+    tags: DTPIpCalculator

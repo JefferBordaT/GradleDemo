@@ -1,0 +1,30 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.0'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '3.2.5'
+    id 'java'
+}
+
+group = 'com.example.gradledemo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+apply plugin: 'application'
+mainClassName = "${group}.Application"
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url "https://plugins.gradle.org/m2"
+    }
+}
+
+dependencies {
+    testImplementation 'com.appgate.dtp:automation_utils:1.0.0-rc'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
+}
+
+test {
+    enableAssertions = true
+}
+
