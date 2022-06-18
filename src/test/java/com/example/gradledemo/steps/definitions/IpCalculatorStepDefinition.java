@@ -1,7 +1,6 @@
 package com.example.gradledemo.steps.definitions;
 
 
-import com.appgate.dtp.config.ComponentTest;
 import com.appgate.dtp.util.constants.Constants;
 import com.appgate.dtp.util.enums.Context;
 import com.appgate.dtp.util.report.ReportConfig;
@@ -13,11 +12,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
-@ComponentTest
+@SpringBootTest
 public class IpCalculatorStepDefinition {
 
     @Autowired

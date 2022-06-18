@@ -1,1 +1,17 @@
 rootProject.name = 'GradleDemo'
+
+dependencyResolutionManagement {
+
+    repositories {
+
+        mavenCentral()
+        mavenLocal()
+    }
+
+    versionCatalogs {
+        libs {
+            library 'automation-utils','com.appgate.dtp','automation_utils' version "$automationUtilsVersion"
+            library 'lombok','org.projectlombok','lombok' version "$lombokVersion"
+        }
+    }
+}
